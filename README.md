@@ -1,2 +1,3 @@
-# CRUD-ANGULAR-NODE
-CRUD en Ionic con Api en Node.js
+# FRONT PARA CRUD EN NODE
+Parte front en Ionic para realizar un CRUD con un API en Node.js
+
