@@ -1,0 +1,53 @@
+<!-- Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Título -->
+    <ion-title>
+      Tabla
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Comienzo del content -->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+    <!-- Toolbar -->
+    <ion-toolbar>
+      <ion-title size="large">Tabla</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Tabla -->
+  <ion-grid class="ion-margin">
+  <ion-row>
+    <ion-col>ID</ion-col>
+    <ion-col>TÍTULO</ion-col>
+    <ion-col>AÑO</ion-col>
+    <ion-col>VALORACIÓN</ion-col>
+  </ion-row>
+
+    <!-- Recorrer array -->
+  <ion-row *ngFor="let pelicula of list">
+    <ion-col>{{pelicula.id}}</ion-col>
+    <ion-col>{{pelicula.titulo}}</ion-col>
+    <ion-col>{{pelicula.fecha}}</ion-col>
+    <ion-col>{{pelicula.valoracion}}</ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <!-- ID -->
+  <ion-item color="background-color: transparent !important;">
+    <ion-label position="floating" style="font-size: 20px">ID</ion-label>
+    <ion-input [(ngModel)]="id" type="text"></ion-input>
+  </ion-item>
+
+  <!-- Botón eliminar -->
+  <ion-button type="button" (click)="delete()"
+              color="danger" shape="round" expand="block">
+    <ion-icon slot="start" name="trash-outline" style="font-size: 10px"></ion-icon>
+    Eliminar película</ion-button>
+
+    <!-- Botón ir a la tabla -->
+    <app-form-c></app-form-c>
+</ion-content>

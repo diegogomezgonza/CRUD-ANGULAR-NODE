@@ -1,0 +1,71 @@
+<!-- Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+<!-- Título -->
+    <ion-title>
+      Formulario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Comienzo del content -->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+    <!-- Toolbar -->
+    <ion-toolbar >
+      <ion-title size="large">Formulario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list lines="full" id="form">
+
+    <!-- ID -->
+    <ion-item color="background-color: transparent !important;">
+      <ion-label position="floating">ID</ion-label>
+      <ion-input [(ngModel)]="id" type="text"></ion-input>
+    </ion-item>
+
+    <!-- Título -->
+    <ion-item color="background-color: transparent !important;">
+      <ion-label position="floating">Título</ion-label>
+      <ion-input [(ngModel)]="titulo" type="text"></ion-input>
+    </ion-item>
+
+    <!-- Año -->
+    <ion-item color="background-color: transparent !important;">
+      <ion-label position="floating">Año</ion-label>
+      <ion-input [(ngModel)]="fecha" type="text"></ion-input>
+    </ion-item>
+
+    <!-- Valoración -->
+    <ion-item color="background-color: transparent !important;">
+      <ion-label position="floating">Valoración</ion-label>
+      <ion-input [(ngModel)]="valoracion" type="text"></ion-input>
+    </ion-item>
+
+    <!-- INSERT -->
+    <ion-row>
+      <ion-col>
+        <ion-button type="button" (click)="add()"
+                    color="success" shape="full" expand="block">
+          <ion-icon slot="start" name="add-outline"></ion-icon>
+          Crear película</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!-- UPDATE -->
+    <ion-row>
+      <ion-col>
+        <ion-button type="button" (click)="update()"
+                    color="warning" shape="full" expand="block">
+          <ion-icon slot="start" name="arrow-up-outline"></ion-icon>
+          Actualizar película</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!-- IR A TABLA -->
+    <app-tabla-c></app-tabla-c>
+  </ion-list>
+
+  </ion-content>
